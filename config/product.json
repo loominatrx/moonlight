@@ -11,7 +11,6 @@
 	"win32AppUserModelId": "loominatrx.Moonlight",
 	"win32ShellNameShort": "Moonlight",
 	"darwinBundleIdentifier": "id.my.loominatrx.Moonlight",
-	"linuxIconName": "moonlight",
 	"onboardingThemes": [
 		{
 			"id": "bearded-theme-black-&-diamond",
