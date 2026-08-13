@@ -1,0 +1,53 @@
+{
+	"extensions": [
+		{
+			"id": "JohnnyMorganz.luau-lsp",
+			"destination": "extensions/luau-lsp",
+			"defaults": {
+				"luau-lsp.completion.autocompleteEnd": true,
+				"luau-lsp.completion.imports.separateGroupsWithLine": true,
+				"luau-lsp.completion.imports.useConst": true,
+				"luau-lsp.format.convertQuotes": true,
+				"luau-lsp.inlayHints.variableTypes": true,
+				"luau-lsp.plugins.enabled": true,
+				"luau-lsp.plugins.fileSystem.enabled": true,
+				"luau-lsp.studioPlugin.enabled": true
+			}
+		},
+		{
+			"id": "evaera.vscode-rojo",
+			"destination": "extensions/vscode-rojo"
+		},
+		{
+			"id": "JohnnyMorganz.stylua",
+			"destination": "extensions/stylua",
+			"configurationDefaults": {
+				"editor.formatOnSave": true,
+				"editor.formatOnPaste": true,
+				"editor.formatOnType": true,
+				"[luau]": {
+					"editor.defaultFormatter": "JohnnyMorganz.stylua"
+				}
+			}
+		},
+		{
+			"id": "kampfkarren.selene-vscode",
+			"destination": "extensions/selene-vscode"
+		},
+		{
+			"id": "hexcede.roblox-vanilla-icons",
+			"destination": "extensions/roblox-vanilla-icons",
+			"configurationDefaults": {
+				"workbench.iconTheme": "vanilla-icons-colorful-dark"
+			}
+		},
+		{
+			"id": "beardedbear.beardedtheme",
+			"destination": "extensions/beardedtheme",
+			"configurationDefaults": {
+				"workbench.colorTheme": "Bearded Theme Black & Diamond"
+			}
+		}
+	]
+}
+

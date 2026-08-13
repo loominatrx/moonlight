@@ -1,0 +1,34 @@
+{
+	"nameShort": "Moonlight",
+	"nameLong": "Moonlight",
+	"applicationName": "moonlight",
+	"dataFolderName": ".moonlight",
+	"sharedDataFolderName": ".moonlight-shared",
+	"win32MutexName": "moonlight",
+	"win32DirName": "Moonlight",
+	"win32NameVersion": "Moonlight",
+	"win32RegValueName": "Moonlight",
+	"win32AppUserModelId": "loominatrx.Moonlight",
+	"win32ShellNameShort": "Moonlight",
+	"darwinBundleIdentifier": "id.my.loominatrx.Moonlight",
+	"linuxIconName": "moonlight",
+	"onboardingThemes": [
+		{
+			"id": "bearded-theme-black-&-diamond",
+			"label": "Bearded Theme Black & Diamond",
+			"themeId": "Bearded Theme Black & Diamond",
+			"type": "dark"
+		},
+		{
+			"id": "bearded-theme-arc-blueberry",
+			"label": "Bearded Theme Arc Blueberry",
+			"themeId": "Bearded Theme Arc Blueberry",
+			"type": "dark"
+		}
+	],
+	"builtInExtensionsEnabledWithAutoUpdates": [
+		"GitHub.copilot-chat"
+	],
+	"sessionsWindowAllowedExtensions": [],
+	"voiceWsUrl": "wss://falcon-caas.mai.microsoft.com/voice-code/api/v1/realtime/voice"
+}
