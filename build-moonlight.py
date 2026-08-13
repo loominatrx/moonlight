@@ -6,6 +6,7 @@ import os
 import shutil
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 
@@ -305,16 +306,61 @@ def update_extensions():
 # ============================================================
 
 def run_with_nvm(command, cwd):
+    """
+    Run a command using the Node version specified by .nvmrc.
+
+    A temporary Bash script is used so the NVM environment is
+    initialized normally inside Bash.
+    """
+
     nvmrc = Path(cwd) / ".nvmrc"
 
     if not nvmrc.exists():
         error(f"No .nvmrc found in {cwd}")
         sys.exit(1)
 
-    run(
-        ["nvm-exec", *command],
-        cwd=cwd,
+    command_string = " ".join(
+        subprocess.list2cmdline([str(arg)])
+        for arg in command
     )
+
+    script = f"""\
+#!/usr/bin/env bash
+set -e
+
+export NVM_DIR="$HOME/.nvm"
+
+if [ ! -s "$NVM_DIR/nvm.sh" ]; then
+    echo "ERROR: NVM could not be found at $NVM_DIR/nvm.sh"
+    exit 1
+fi
+
+\. "$NVM_DIR/nvm.sh"
+
+nvm install
+nvm use
+
+{command_string}
+"""
+
+    with tempfile.NamedTemporaryFile(
+        mode="w",
+        suffix=".sh",
+        prefix="moonlight-",
+        delete=False,
+    ) as f:
+        f.write(script)
+        script_path = Path(f.name)
+
+    try:
+        script_path.chmod(0o755)
+
+        run(
+            ["bash", "-c", str(script_path)],
+            cwd=cwd,
+        )
+    finally:
+        script_path.unlink(missing_ok=True)
 
 def install_dependencies():
     log("Installing VS Code dependencies")
