@@ -2,7 +2,7 @@
 	"extensions": [
 		{
 			"id": "JohnnyMorganz.luau-lsp",
-			"destination": "extensions/luau-lsp",
+			"destination": ".build/vscode/extensions/luau-lsp",
 			"defaults": {
 				"luau-lsp.completion.autocompleteEnd": true,
 				"luau-lsp.completion.imports.separateGroupsWithLine": true,
@@ -16,11 +16,11 @@
 		},
 		{
 			"id": "evaera.vscode-rojo",
-			"destination": "extensions/vscode-rojo"
+			"destination": ".build/vscode/extensions/vscode-rojo"
 		},
 		{
 			"id": "JohnnyMorganz.stylua",
-			"destination": "extensions/stylua",
+			"destination": ".build/vscode/extensions/stylua",
 			"configurationDefaults": {
 				"editor.formatOnSave": true,
 				"editor.formatOnPaste": true,
@@ -32,22 +32,21 @@
 		},
 		{
 			"id": "kampfkarren.selene-vscode",
-			"destination": "extensions/selene-vscode"
+			"destination": ".build/vscode/extensions/selene-vscode"
 		},
 		{
 			"id": "hexcede.roblox-vanilla-icons",
-			"destination": "extensions/roblox-vanilla-icons",
+			"destination": ".build/vscode/extensions/roblox-vanilla-icons",
 			"configurationDefaults": {
 				"workbench.iconTheme": "vanilla-icons-colorful-dark"
 			}
 		},
 		{
 			"id": "beardedbear.beardedtheme",
-			"destination": "extensions/beardedtheme",
+			"destination": ".build/vscode/extensions/beardedtheme",
 			"configurationDefaults": {
 				"workbench.colorTheme": "Bearded Theme Black & Diamond"
 			}
 		}
 	]
 }
-
